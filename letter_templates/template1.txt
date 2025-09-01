@@ -1,0 +1,6 @@
+Hello {HR_Name},
+
+I am {Your_Name}, currently pursuing MCA. Please find attached my resume for your kind consideration.
+
+Best Regards,  
+{Your_Name}
