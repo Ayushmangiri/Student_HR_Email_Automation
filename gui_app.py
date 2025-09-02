@@ -86,7 +86,7 @@ class HREmailApp:
     def start_automation(self):
         messagebox.showinfo("Automation Started", "Emails will be sent as per schedule!")
 
-# ✅ main.py will call this
+#  main.py will call this
 def start_app():
     root = tk.Tk()
     app = HREmailApp(root)

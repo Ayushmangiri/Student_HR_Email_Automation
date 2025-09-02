@@ -15,7 +15,7 @@ def send_email(to_email: str, subject: str, body: str) -> str:
     resume_path = os.getenv("RESUME_PATH")
 
     if not sender_email or not sender_password:
-        return "❌ Error: EMAIL_USER or EMAIL_PASS not found in .env file"
+        return " Error: EMAIL_USER or EMAIL_PASS not found in .env file"
 
     msg = MIMEMultipart()
     msg["From"] = sender_email
@@ -32,13 +32,13 @@ def send_email(to_email: str, subject: str, body: str) -> str:
             part.add_header("Content-Disposition", f"attachment; filename={os.path.basename(resume_path)}")
             msg.attach(part)
         except Exception as e:
-            return f"❌ Error attaching resume: {e}"
+            return f" Error attaching resume: {e}"
 
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
             server.login(sender_email, sender_password)
             server.sendmail(sender_email, to_email, msg.as_string())
-        return "✅ Email sent successfully!"
+        return " Email sent successfully!"
     except Exception as e:
-        return f"❌ Error sending email: {e}"
+        return f" Error sending email: {e}"
