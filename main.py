@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os
 import pandas as pd
 from dotenv import load_dotenv
@@ -45,3 +46,16 @@ for index, row in df.iterrows():
 log_df = pd.DataFrame(log_list)
 log_df.to_csv("email_log.csv", index=False)
 print("✅ Log saved to email_log.csv")
+=======
+from gui_app import start_app
+from resume_utils import extract_resume_data
+
+def main():
+    resume_path = "resume/Resume.pdf"  # apna resume path sahi rakho
+    resume_data = extract_resume_data(resume_path)
+    print("Extracted Resume Data:", resume_data)
+
+if __name__ == "__main__":
+    start_app()
+    main()
+>>>>>>> c363f89e169fa61bd5bb005c7dca8d02f7a83730
