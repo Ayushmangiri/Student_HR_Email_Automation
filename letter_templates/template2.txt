@@ -1,0 +1,6 @@
+Dear {HR_Name},
+
+I am writing to express my interest in career opportunities at your organization. Kindly find my resume attached.
+
+Sincerely,  
+{Your_Name}
